@@ -1,0 +1,11 @@
+.expanded-state {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 10px 0 10px;
+  width: 350px;
+}
+
+.expanded-state .state-name {
+  font-size: 24px;
+  text-align: center;
+}

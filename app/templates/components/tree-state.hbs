@@ -1,5 +1,11 @@
 <div style="margin-left: 20px;">
-  {{state.shortName}}
+  <div class="single-state {{if isExpanded 'expanded-state'}}" {{action 'toggleExpansion'}}>
+    {{#if isExpanded}}
+      <div class="state-name">{{state.name}}</div>
+    {{else}}
+      <div class="state-name">{{state.shortName}}</div>
+    {{/if}}
+  </div>
   {{#each state.children as |child|}}
     {{tree-state state=child}}
   {{/each}}
