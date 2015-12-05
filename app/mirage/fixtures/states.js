@@ -25,5 +25,44 @@ export default [
     id: 6,
     name: 'empty',
     parent: 1
+  }, {
+    id: 7,
+    name: 'loaded',
+    parent: 1,
+    children: [8, 11, 12]
+  }, {
+    id: 8,
+    name: 'loaded.created',
+    parent: 7,
+    children: [9, 10]
+  }, {
+    id: 9,
+    name: 'loaded.created.uncommitted',
+    parent: 8
+  }, {
+    id: 10,
+    name: 'loaded.created.inFlight',
+    parent: 8
+  }, {
+    id: 11,
+    name: 'loaded.saved',
+    parent: 7
+  }, {
+    id: 12,
+    name: 'loaded.updated',
+    parent: 7,
+    children: [13, 14]
+  }, {
+    id: 13,
+    name: 'loaded.updated.uncommitted',
+    parent: 12
+  }, {
+    id: 14,
+    name: 'loaded.updated.inFlight',
+    parent: 12
+  }, {
+    id: 15,
+    name: 'loading',
+    parent: 1
   }
 ]
