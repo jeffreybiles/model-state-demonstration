@@ -1,10 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  name: DS.attr('name'),
-  parent: DS.belongsTo('state'),
-  children: DS.hasMany('children'),
-  transitions: DS.hasMany('transition'),
+  name: DS.attr('string'),
+  parent: DS.belongsTo('state', {inverse: 'children'}),
+  children: DS.hasMany('state', {defaultValue: [], inverse: 'parent'}),
+  transitions: DS.hasMany('transition', {defaultValue: []}),
 
   isDeleted: DS.attr('boolean', {defaultValue: false}),
   isEmpty: DS.attr('boolean', {defaultValue: false}),
