@@ -1,6 +1,6 @@
-<div style="margin-left: {{multiply 20 depth}}px;">
-  {{state.name}}
+<div style="margin-left: 20px;">
+  {{state.shortName}}
   {{#each state.children as |child|}}
-    {{tree-state state=child depth=(add depth 1)}}
+    {{tree-state state=child}}
   {{/each}}
 </div>
