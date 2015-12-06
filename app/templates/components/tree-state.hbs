@@ -2,6 +2,11 @@
   <div class="single-state {{if isExpanded 'expanded-state'}}" {{action 'toggleExpansion'}}>
     {{#if isExpanded}}
       <div class="state-name">{{state.name}}</div>
+      <div class="state-properties">
+        {{#each state.possibleFlags as |flag|}}
+          <div class="{{unless (get state flag) 'greyed'}}">{{flag}}: {{get state flag}}</div>
+        {{/each}}
+      </div>
     {{else}}
       <div class="state-name">{{state.shortName}}</div>
     {{/if}}
