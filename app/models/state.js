@@ -10,13 +10,12 @@ export default DS.Model.extend({
   isDeleted: isX('deleted'),
   isDirty: isX('dirty'),
   isEmpty: isX('empty'),
-  isError: isX('error'),
   isLoaded: isX('loaded'),
   isLoading: isX('loading'),
   isNew: isX('new'),
   isSaving: isX('saving'),
   isValid: isX('valid'),
-  possibleFlags: ['isDeleted', 'isDirty', 'isEmpty', 'isError', 'isLoaded', 'isLoading', 'isNew',  'isSaving', 'isValid'],
+  possibleFlags: ['isDeleted', 'isDirty', 'isEmpty', 'isLoaded', 'isLoading', 'isNew',  'isSaving', 'isValid'],
 
   shortName: Ember.computed('name', function(){
     return this.get('name').split('.').get('lastObject')

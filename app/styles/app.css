@@ -13,3 +13,7 @@
 .greyed {
   opacity: .4;
 }
+
+.highlighted-state {
+  background-color: yellow;
+}

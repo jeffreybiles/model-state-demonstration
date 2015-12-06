@@ -8,10 +8,10 @@
         {{/each}}
       </div>
     {{else}}
-      <div class="state-name">{{state.shortName}}</div>
+      <span class="state-name {{if (get state highlightedFlag) 'highlighted-state'}}">{{state.shortName}}</span>
     {{/if}}
   </div>
   {{#each state.children as |child|}}
-    {{tree-state state=child}}
+    {{tree-state state=child highlightedFlag=highlightedFlag}}
   {{/each}}
 </div>

@@ -1,2 +1,16 @@
 <h1>States</h1>
-{{tree-state state=rootState}}
+
+
+{{tree-state state=rootState highlightedFlag=highlightedFlag}}
+
+<hr>
+<h3>Highlight By Flag</h3>
+
+{{#each rootState.possibleFlags as |flag|}}
+  <button {{action 'highlightFlag' flag}} class="{{if (eq flag highlightedFlag) 'highlighted-state'}}">
+    <span>{{flag}}</span>
+  </button>
+{{/each}}
+<button {{action 'highlightFlag' null}}>
+  Reset
+</button>
