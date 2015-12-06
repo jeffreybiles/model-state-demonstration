@@ -1,7 +1,7 @@
 <div style="margin-left: 20px;">
   <div class="single-state {{if isExpanded 'expanded-state'}}" {{action 'toggleExpansion'}}>
     {{#if isExpanded}}
-      <div class="state-name">{{state.name}}</div>
+      <div class="state-name {{if (get state highlightedFlag) 'highlighted-state'}}">{{state.name}}</div>
       <div class="state-properties">
         {{#each state.possibleFlags as |flag|}}
           <div class="{{unless (get state flag) 'greyed'}}">{{flag}}: {{get state flag}}</div>
