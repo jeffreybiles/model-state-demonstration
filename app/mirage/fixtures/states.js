@@ -8,7 +8,7 @@ export default [
     id: 2,
     name: 'deleted',
     parent: 1,
-    children: [3, 4, 5]
+    children: [3, 4, 5, 16]
   }, {
     id: 3,
     name: 'deleted.saved',
@@ -34,7 +34,7 @@ export default [
     id: 8,
     name: 'loaded.created',
     parent: 7,
-    children: [9, 10]
+    children: [9, 10, 17]
   }, {
     id: 9,
     name: 'loaded.created.uncommitted',
@@ -51,7 +51,7 @@ export default [
     id: 12,
     name: 'loaded.updated',
     parent: 7,
-    children: [13, 14]
+    children: [13, 14, 18]
   }, {
     id: 13,
     name: 'loaded.updated.uncommitted',
@@ -64,5 +64,20 @@ export default [
     id: 15,
     name: 'loading',
     parent: 1
+  }, {
+    id: 16,
+    name: 'deleted.invalid',
+    parent: 2,
+    isValid: false
+  }, {
+    id: 17,
+    name: 'loaded.created.invalid',
+    parent: 8,
+    isValid: false
+  }, {
+    id: 18,
+    name: 'loaded.updated.invalid',
+    parent: 12,
+    isValid: false
   }
 ]

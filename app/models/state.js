@@ -14,7 +14,7 @@ export default DS.Model.extend({
   isNew: DS.attr('boolean', {defaultValue: false}),
   isReloading: DS.attr('boolean', {defaultValue: false}),
   isSaving: DS.attr('boolean', {defaultValue: false}),
-  isValid: DS.attr('boolean', {defaultValue: false}),
+  isValid: DS.attr('boolean', {defaultValue: true}),
 
   shortName: Ember.computed('name', function(){
     return this.get('name').split('.').get('lastObject')
